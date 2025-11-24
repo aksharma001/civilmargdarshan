@@ -6,7 +6,7 @@
     <title>Civil Margdarshan - Rajasthan Exam Prep</title>
     <meta name="description" content="A comprehensive educational platform for Rajasthan government exam preparation featuring resources, video lectures, and an AI-powered exam counselor.">
     
-    <!-- Tailwind CSS via CDN (kept for simplicity as per original request) -->
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -51,6 +51,13 @@
       .animate-marquee:hover {
         animation-play-state: paused;
       }
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 0.5s ease-out forwards;
+      }
     </style>
   <script type="importmap">
 {
@@ -68,6 +75,7 @@
 </head>
   <body class="bg-gray-50 text-slate-800 antialiased">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>
